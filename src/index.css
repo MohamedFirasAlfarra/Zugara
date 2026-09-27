@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
+  --color-primary-50: #f0f8fa;
+  --color-primary-100: #dbeef2;
+  --color-primary-200: #b9dee5;
+  --color-primary-300: #88c4d1;
+  --color-primary-400: #4da3b7;
+  --color-primary-500: #228b9f;
+  --color-primary-600: #1a6e7e;
+  --color-primary-700: #134e5b;
+  --color-primary-800: #0e3b43;
+  --color-primary-900: #0a2d34;
+  --color-primary-950: #07171a;
+
+  --color-accent-50: #fff8f1;
+  --color-accent-100: #feecd8;
+  --color-accent-200: #fcd5b0;
+  --color-accent-300: #fab77e;
+  --color-accent-400: #f69147;
+  --color-accent-500: #e77a28;
+  --color-accent-600: #d15f1b;
+  --color-accent-700: #ab4518;
+  --color-accent-800: #88381b;
+  --color-accent-900: #6f3019;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse-slow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(350%) skewX(-20deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 36s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e3840;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zugara - Umzüge, Haushaltsauflösungen & Entrümpelungen</title>
+    <meta name="description" content="Zugara: Ihr verlässlicher Partner für stressfreie Umzüge, diskrete Haushaltsauflösungen und professionelle Entrümpelungen. Festpreisgarantie und besenreine Übergabe." />
+    <meta property="og:title" content="Zugara - Umzüge, Haushaltsauflösungen & Entrümpelungen" />
+    <meta property="og:description" content="Zugara: Ihr verlässlicher Partner für stressfreie Umzüge, diskrete Haushaltsauflösungen und professionelle Entrümpelungen." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M98 22c28 1 53 14 69 34 14 17 19 40 15 62-2-13-8-25-18-35-12-12-28-20-46-23-12-2-23 0-34 5 7-14 16-28 22-42-3-1-6-1-8-1z' fill='%23ea7200'/%3E%3Cpath d='M98 22C54 23 18 59 18 103c0 44 36 80 80 80 44 0 80-36 80-80 0-5-1-10-2-15-4 11-12 21-22 29-14 11-32 18-51 18-27 0-50-16-57-40-5-17 1-35 13-48 11-12 27-21 44-23-2-1-4-2-5-2z' fill='%23005a64'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('zugara-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#faf8f5] dark:bg-[#07171a] text-[#1a2e33] dark:text-[#e2f1f3] font-sans antialiased transition-colors duration-300 selection:bg-[#e77a28] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
